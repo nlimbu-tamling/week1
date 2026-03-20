@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Products</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+         <div class="header-container">
+
+            <!---LEFT-->
+        <div class="logo-section">
+                <img src="logo.png" alt=" UCLan Logo" class="logo">
+                    <span class="shop-name">Student Shop</span>
+                </div>
+
+                <!--RIGHT-->
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                <a href="cart.html">Cart</a>
+             </nav> 
+             </div>
+             </header>
+        <main>
+            <div class="continer">
+            <h1>
+                Our Products
+            </h1>
+            <div id="product-list"></div>
+            </div>
+        </main>
+        <footer  class="footer">
+          <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>Link</h3>
+            <p>studentunion@uclan.ac.uk</p>   
+    </div>
+    <div class="footer-column">
+        <h3>Cotact</h3>
+        <p>Email:uniinormtion@ucln.ac.uk</p>
+        <p>Phone:07756708</p>
+    </div>
+    <div class="footer-column">
+        <h3>Location</h3>
+        <p>University pf Central Lancashire Students Union</p>
+        <p>Pyla Road, Preston, PR1</p>
+        <p>Registered in England</p>
+        <p>Company Number:94023901</p>
+    </div>  
+        </footer>
+
+        <script src="products.js"></script>
+   
+        <script>
+            function viewItem(name, price, image){
+                localStorage.setItem("name",name);
+                localStorage.setItem("price", price);
+                localStorage.setItem("image",image);
+                
+        window.location.href="item.html";
+    }
+        </script>
+    </body>
+</html>

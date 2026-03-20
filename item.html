@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Product Detils
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <h2 id ="productName"></h2>
+    <img id="productImage" width="300">
+    <p id="productPrice"></p>
+    
+    <button onclick="addToCart()">Add to Cart</button>
+
+    <script>
+        const product = JSON.parse(sessionStorage.getItem("selectedProduct"));
+
+        document.getElementById("productName").innerText=product.name;
+        document.getElementById("productPrice").innerText="£"+product.price;
+        document.getElementById("productImage").src=product.image;
+
+        function addToCart() {
+
+            let cart=JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Product added to cart!");
+        }
+    </script>
+    </body>
+</html>
